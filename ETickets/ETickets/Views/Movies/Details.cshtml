@@ -1,0 +1,38 @@
+﻿@model ETickets.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+
+  
+  
+<div class="card mb-3" style="max-width: 540px;">
+    <h4>Movie</h4>
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src="@Model.ImageURL" class="card-img-top" alt="...">
+
+        </div>
+
+        <div class="col-md-8">
+        <h5 class="card-title">@Model.Name</h5>
+  
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text"> Category:@Model.MovieCategory</p>
+    
+        <p class="card-text">@Model.StartDate</p>
+        <p class="card-text">@Model.EndDate</p>
+        <p class="card-text">@Model.Producer.FullName</p>
+    
+         <p class="card-text">@Model.Price$</p>
+            <a href="#" class="btn btn-primary">book now</a>
+    </div>
+    </div>
+</div>
+<div>
+
+    <a asp-action="Index">Back to List</a>
+</div>
